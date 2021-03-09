@@ -1,1 +1,8 @@
 // Specific CSS for your home-page
+body {
+  color: $island-dark;
+}
+
+.border-bottom {
+  border-color: $island-ocean !important;
+}
