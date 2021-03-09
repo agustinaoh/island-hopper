@@ -1,3 +1,44 @@
-<div class="container">
-  <h1>Islands</h1>
+<div class="map-wrapper">
+
+  <!-- LISTING -->
+
+  <div class="left-listing">
+
+
+    <div class="left-header">
+
+      <h2>The island experience, made easy.</h2>
+        <%= form_with do |f| %>
+          <div class="d-flex justify-content-between">
+            <%= f.text_field :query, value: "search term", class: "form-control"  %>
+            <%= f.submit "Search", class: "btn btn-primary"  %>
+          </div>
+        <% end %>
+    </div>
+
+
+    <div class="cards map-cards">
+      <% @islands.each do |island| %>
+        <div class="card-trip">
+          <img src='<%= cl_image_path island.photos.first.key %>' alt="<%= island.name %>" />
+          <div class="card-trip-infos">
+            <div>
+
+              <h2><%= link_to island.name, island_path(island) %></h2>
+
+              <p><%= island.description %>!</p>
+            </div>
+            <h2 class="card-trip-pricing">€ <%= island.price_per_night %> / night</h2>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div class="right-map">
+    <img src="https://images.unsplash.com/photo-1533604145636-765f22ac7352?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+  </div>
+
+
 </div>

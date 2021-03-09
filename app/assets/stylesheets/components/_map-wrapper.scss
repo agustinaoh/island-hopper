@@ -1,0 +1,26 @@
+
+.map-wrapper {
+  display: flex;
+}
+
+
+.left-listing {
+  flex-grow: 2;
+}
+
+
+.right-map {
+  width: 100%;
+  // flex-grow: 1;
+}
+
+
+.map-cards {
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+
+.left-header {
+  padding: 30px 10px 20px 10px;
+}

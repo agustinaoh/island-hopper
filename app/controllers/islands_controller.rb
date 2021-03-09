@@ -12,4 +12,6 @@ class IslandsController < ApplicationController
     @island = Island.find(params[:id])
   end
 
+  def search
+  end
 end
