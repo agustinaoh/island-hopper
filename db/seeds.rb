@@ -1,9 +1,22 @@
 Island.destroy_all
 User.destroy_all
 # users seeds
-user1 = User.create(first_name: "Sally", last_name: "Seashell", email: "guillaume@myisland.com", password: "password")
-user2 = User.create(first_name: "Daire", last_name: "Teabag", email: "daire@yahoo.com", password: "password")
-user3 = User.create(first_name: "Agustina", last_name: "Gonzales", email: "richard@branson.com", password: "password")
+avatar1 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615302078/vicky-hladynets-C8Ta0gwPbQg-unsplash_jwpyzl.jpg')
+avatar2 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615302095/julian-wan-2EdIX-O2lkI-unsplash_oez03y.jpg')
+avatar3 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615302112/michael-dam-mEZ3PoFGs_k-unsplash_oznodo.jpg')
+
+user1 = User.new(first_name: "Sally", last_name: "Seashell", email: "guillaume@myisland.com", password: "password")
+user1.avatar.attach(io: avatar1, filename: 'nes.png', content_type: 'image/png')
+user1.save!
+
+user2 = User.new(first_name: "Daire", last_name: "Teabag", email: "daire@yahoo.com", password: "password")
+user2.avatar.attach(io: avatar2, filename: 'nes.png', content_type: 'image/png')
+user2.save!
+
+user3 = User.new(first_name: "Agustina", last_name: "Gonzales", email: "richard@branson.com", password: "password")
+user3.avatar.attach(io: avatar3, filename: 'nes.png', content_type: 'image/png')
+user3.save!
+
 
 file1 = URI.open('https://images.unsplash.com/photo-1553603227-2358aabe821e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80')
 file2 = URI.open('https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80')
