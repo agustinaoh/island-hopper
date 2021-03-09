@@ -12,3 +12,19 @@
     </form>
   </div>
 </div>
+
+<% if user_signed_in? %>
+  <p>Hello, <%= current_user.first_name %></p>
+<% end %>
+
+<%= link_to new_user_session_path do %>
+  <button class="btn btn-primary">Log in</button>
+<% end %>
+
+<%= link_to destroy_user_session_path, method: :delete do %>
+  <button class="btn btn-primary">Log out</button>
+<% end %>
+
+<%= link_to new_user_registration_path do %>
+  <button class="btn btn-primary">Sign up</button>
+<% end %>
