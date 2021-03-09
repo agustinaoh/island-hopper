@@ -4,11 +4,69 @@
   </div>
 </div>
 
-<div class="container text-center mt-5 pb-3 border-bottom">
+<% if user_signed_in? %>
+  <h2 class="text-center mt-4"> Welcome, <%= current_user.first_name %>.</h2>
+<% end %>
+
+
+<div class="container text-center mt-5 pb-4 border-bottom">
   <div class="searchbar">
     <form action="">
-      <input type="text" placeholder="Search...">
+      <input style="width: 400px; padding: 2px" type="text" placeholder="Search...">
       <a class="btn btn-primary" href="#">Find your island</a>
     </form>
   </div>
 </div>
+
+<div class="container">
+  
+  <div class="featured-islands">
+    <h2 class="text-center margin-fix mt-5">Featured islands</h2>
+    <div class="cards">
+      <% @islands.first(3).each do |island| %>
+          <%= link_to island_path(island) do %>
+            <div class="card-island">
+              <%= cl_image_tag island.photos.first.key%>
+              <div class="card-island-infos">
+                <h2><%= island.name %> Island</h2>
+                <h3 class="pt-1"><%= island.location %></h3>
+                <p class="py-3">The <%= island.name %> Island is located in <%= island.description.truncate(12, omission: '... (See more)') %></p>
+                <p>from</p>
+                <h4 class="pt-1">€<%= island.price_per_night %> / night</h4>
+              </div>
+            </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-center margin-fix my-3">Featured locations</h2>
+    <div class="featured-categories">
+      <%= link_to root_path do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= cl_image_path '5mkea5873qwxi3mb6f9vhyctmkwa' %> )">
+          Pacific
+        </div>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= cl_image_path 'oliver-sjostrom-hFHXlAmRwzM-unsplash_cp8n5j' %> )">
+          Mediterranean
+        </div>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= cl_image_path '7ay0hm7gs33ki9qge8fauvvg7g95' %> )">
+          Asia
+        </div>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= cl_image_path 'hoodh-ahmed-e9G1rz-0rLU-unsplash_no94t8' %> )">
+          Maldives
+        </div>
+      <% end %>
+    </div>
+  
+  </div>
+
+</div>
+
+<%= render 'shared/footer' %>
