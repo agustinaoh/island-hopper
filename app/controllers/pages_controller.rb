@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def home
     @islands = Island.all
   end
+
+  def dashboard
+
+  end
 end

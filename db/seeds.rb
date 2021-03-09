@@ -1,5 +1,6 @@
 Island.destroy_all
 User.destroy_all
+
 # users seeds
 avatar1 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615302078/vicky-hladynets-C8Ta0gwPbQg-unsplash_jwpyzl.jpg')
 avatar2 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615302095/julian-wan-2EdIX-O2lkI-unsplash_oez03y.jpg')
