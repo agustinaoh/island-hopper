@@ -1,2 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render 'shared/navbar' %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( '<%= cl_image_path 'cris-tagupa-9ZXHUr5aCwM-unsplash_tuxfon'%>' );">
+  <div class="container text-center">
+    <h1>The island experience, made easy.</h1>
+  </div>
+</div>
+
+<div class="container text-center mt-5 pb-3 border-bottom">
+  <div class="searchbar">
+    <form action="">
+      <input type="text" placeholder="Search...">
+      <a class="btn btn-primary" href="#">Find your island</a>
+    </form>
+  </div>
+</div>
