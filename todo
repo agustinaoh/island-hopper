@@ -2,9 +2,7 @@
 
 2/ migrate
 
-3/ rails genecd rails-airbnb-clone
-gh repo create
-git push origin masterrate model island name location description:text capacity:integer facilities:text access price_per_night:integer user:references
+3/ rails generate model island name location description:text capacity:integer facilities:text access price_per_night:integer user:references
 
 4/ rails generate controller islands
 
@@ -16,3 +14,5 @@ git push origin masterrate model island name location description:text capacity:
 # rails g controller cocktails index show new create
 
 # rails destroy controller doses
+
+
