@@ -1,5 +1,5 @@
-User.destroy_all
 Island.destroy_all
+User.destroy_all
 # users seeds
 user1 = User.create(first_name: "Sally", last_name: "Seashell", email: "guillaume@myisland.com", password: "password")
 user2 = User.create(first_name: "Daire", last_name: "Teabag", email: "daire@yahoo.com", password: "password")
@@ -25,7 +25,7 @@ island1 = Island.new(
     facilities: "Pool, tennis court",
     user: user1
     )
-island1.photo.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+island1.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 island1.save!
 
 island2 = Island.new(
@@ -37,7 +37,7 @@ island2 = Island.new(
     facilities: "Pool, tennis court" ,
     user: user2
     )
-island2.photo.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+island2.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
 island2.save!
 
 island3 = Island.new(
@@ -49,7 +49,7 @@ island3 = Island.new(
     facilities: "Pool, tennis court" ,
     user: user3
     )
-island3.photo.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+island3.photos.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
 island3.save!
 
 island4 = Island.new(
@@ -61,7 +61,7 @@ island4 = Island.new(
     facilities: "Pool, tennis court" ,
     user: user2
     )
-island4.photo.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+island4.photos.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
 island4.save!
 
 island5 = Island.new(
@@ -74,7 +74,7 @@ island5 = Island.new(
     user: user3
     )
 
-island5.photo.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+island5.photos.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
 island5.save!
 
 island6 = Island.new(
@@ -86,7 +86,7 @@ island6 = Island.new(
     facilities: "Pool, tennis court" ,
     user: user1
     )
-island6.photo.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+island6.photos.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 
 island6.save!
 
@@ -99,7 +99,7 @@ island7 = Island.new(
     facilities: "Pool, tennis court" ,
     user: user2
     )
-island7.photo.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+island7.photos.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 
 island7.save!
 
@@ -112,7 +112,7 @@ island8 = Island.new(
     facilities: "Pool, tennis court" ,
     user: user3
     )
-island8.photo.attach(io: file8, filename: 'nes.png', content_type: 'image/png')
+island8.photos.attach(io: file8, filename: 'nes.png', content_type: 'image/png')
 
 island8.save!
 
@@ -125,7 +125,7 @@ island9 = Island.new(
     facilities: "Pool, tennis court" ,
     user: user1
     )
-island9.photo.attach(io: file9, filename: 'nes.png', content_type: 'image/png')
+island9.photos.attach(io: file9, filename: 'nes.png', content_type: 'image/png')
 
 island9.save!
 
@@ -138,5 +138,5 @@ island10 = Island.new(
     facilities: "Pool, tennis court" ,
     user: user2
     )
-island10.photo.attach(io: file10, filename: 'nes.png', content_type: 'image/png')
+island10.photos.attach(io: file10, filename: 'nes.png', content_type: 'image/png')
 island10.save!
