@@ -140,4 +140,3 @@ island10 = Island.new(
     )
 island10.photos.attach(io: file10, filename: 'nes.png', content_type: 'image/png')
 island10.save!
->>>>>>> 0645fd250976a59210ffe8298babd08732361697
