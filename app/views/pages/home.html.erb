@@ -1,33 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( '<%= cl_image_path 'cris-tagupa-9ZXHUr5aCwM-unsplash_tuxfon'%>' );">
-  <div class="container">
+  <div class="container text-center">
     <h1>The island experience, made easy.</h1>
-    <div class="searchbar">
-      <a class="btn btn-primary" href="#">Find your island</a>
-    </div>
   </div>
 </div>
 
-<div class="container">
-  
-  <div class="featured-islands">
-    <h2 class="text-center margin-fix">Featured islands</h2>
-    <div class="cards-grid p-5">
-      <% @islands.each do |island| %>
-          <%= link_to island_path(island) do %>
-            <div class="card-island">
-
-              <%= cl_image_tag island.photo.key%>
-              
-              <div class="card-island-infos">
-                <div>
-                  <h2><%= island.name %></h2>
-                  <p><%= island.description %></p>
-                </div>
-                <h4>€<%= island.price %>/day</h4>
-              </div>
-            </div>
-        <% end %>
-      <% end %>
-    </div>
+<div class="container text-center mt-5 pb-3 border-bottom">
+  <div class="searchbar">
+    <form action="">
+      <input type="text">
+      <a class="btn btn-primary" href="#">Find your island</a>
+    </form>
   </div>
 </div>
