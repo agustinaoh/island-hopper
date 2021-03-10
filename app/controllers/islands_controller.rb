@@ -25,6 +25,21 @@ class IslandsController < ApplicationController
     @suggestions = Island.all.sample(3)
   end
 
+  def edit
+    @island = Island.find(params[:id])
+  end
+
+  def update
+    @island = Island.find(params[:id])
+    @island.update(island_params)
+
+    if @island.save
+      redirect_to @island
+    else
+      render :new
+    end
+  end
+
   private
 
   def island_params
