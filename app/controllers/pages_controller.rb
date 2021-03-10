@@ -5,7 +5,5 @@ class PagesController < ApplicationController
     @islands = Island.all
   end
 
-  def dashboard
-
-  end
+  def dashboard; end
 end
