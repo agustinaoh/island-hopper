@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   validates :first_name, presence: true
+
+  has_many :islands
 end
