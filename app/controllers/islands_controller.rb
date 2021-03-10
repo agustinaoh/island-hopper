@@ -1,4 +1,5 @@
 class IslandsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @islands = Island.all
@@ -24,7 +25,7 @@ class IslandsController < ApplicationController
   end
 
   private
-  
+
   def island_params
     params.require(:island).permit(
       :name, :location, :description, :capacity, :facilities,
