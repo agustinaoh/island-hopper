@@ -5,3 +5,7 @@
 <%= link_to new_island_path do %>
   <button class="btn btn-primary">+ Add Island</button>
 <% end %>
+
+
+
+<%= cl_image_tag current_user.avatar.key, width: 400, height: 300, crop: :fill %>
