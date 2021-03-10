@@ -9,6 +9,8 @@ body {
 
 .img-style-car {
   height: 450px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: $island-blue;
 }
