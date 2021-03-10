@@ -1,5 +1,3 @@
-<%= render 'shared/navbar' %>
-
 <div class="container">
 
   <h2>My profile</h2>
@@ -12,10 +10,11 @@
     <%= current_user.first_name %>
   </div>
 
-  <div class="my-islands">
-    <div>
-      <h2 class="my-3">My Islands</h2>
-      
+  
+  <div>
+    <h2 class="my-3">My Islands</h2>
+    
+    <div class="my-islands-container">
       <% if current_user.islands %>
         <% current_user.islands.each do |island| %>
           <div class="card-my-island text-center">
@@ -31,15 +30,12 @@
           </div>
         <% end %>
       <% end %>
-        
-      <%= link_to new_island_path do %>
-        <button class="btn btn-primary mt-5">+ Add Island</button>
-      <% end %>
-
     </div>
-   
-
+      
+    <%= link_to new_island_path do %>
+      <button class="btn btn-primary mt-5">+ Add Island</button>
+    <% end %>
 
   </div>
-
+   
 </div>
