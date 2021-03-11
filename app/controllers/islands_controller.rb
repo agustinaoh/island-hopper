@@ -3,6 +3,7 @@ class IslandsController < ApplicationController
 
   def index
     @islands = params[:query].present? ? Island.search_by_name_and_location(params[:query]) : Island.all
+    
     @markers = @islands.geocoded.map do |island|
       {
         lat: island.latitude,
@@ -30,6 +31,7 @@ class IslandsController < ApplicationController
   def show
     @island = Island.find(params[:id])
     @suggestions = Island.all.sample(3)
+    @booking = Booking.new
 
     @markers = [
       {

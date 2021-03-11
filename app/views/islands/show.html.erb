@@ -51,10 +51,15 @@
           <p class="mt-">
             Interested in <strong><%= @island.name %></strong> Island? Send a booking request to <strong><%= @island.user.first_name  %></strong>!
           </p>
-          <div class="date-picker d-flex align-items-center">
-            <div class="p-3 bg-light border">Start date</div>
-            <div class="p-3 bg-light border">End date</div>
-            <button class="btn btn-primary p-3">Request booking</button>
+
+          <div>
+          <%= simple_form_for [@island, @booking] do |f| %>
+          <%= f.input :start_date, as: :string, required: false, input_html: { class: "datepicker" }%>
+          <%= f.input :end_date, as: :string, required: false, input_html: { class: "datepicker"} %>
+          <div class="btn btn-primary">
+          <%= f.button :submit %>
+          </div>
+          <% end %>
           </div>
       </div>
     </div>
