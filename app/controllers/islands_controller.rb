@@ -30,6 +30,7 @@ class IslandsController < ApplicationController
   def show
     @island = Island.find(params[:id])
     @suggestions = Island.all.sample(3)
+    @booking = Booking.new
 
     @markers = [
       {

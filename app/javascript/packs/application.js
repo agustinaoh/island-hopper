@@ -30,6 +30,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { previewImageOnFileSelect } from '../components/photo_preview.js'
 import { initAutocomplete } from '../plugins/init_autocomplete.js'
 import { initMapbox } from '../plugins/init_mapbox';
+import { initFlatpickr } from '../plugins/init_flatpickr';
 
 
 // import { initSelect2 } from '../components/init_select2';
@@ -39,7 +40,6 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   previewImageOnFileSelect();
   initMapbox();
-
+  initFlatpickr();
   initAutocomplete();
 });
-
