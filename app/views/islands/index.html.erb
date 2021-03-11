@@ -6,17 +6,17 @@
 
 
     <div class="left-header">
-      <h2>The island experience, made super easy.</h2>
+      <h2 class="mb-3">The island experience, made super easy.</h2>
 
-          <div class="d-flex justify-content-between">
+          <div class="search-box">
             <%= form_tag islands_path, method: :get do %>
             <%= text_field_tag :query,
                 params[:query],
-                class: "form-control",
+                class: "p-3",
                 placeholder: "Search...",
-                style: "width: 400px; padding: 5px"
+                style: ""
             %>
-            <%= submit_tag "Find your island", class: "btn btn-primary" %>
+            <%= submit_tag "Find your island", class: "p-3 btn btn-primary" %>
             <% end %>
           </div>
 
@@ -29,9 +29,9 @@
           <div class="card-trip-infos">
             <div>
               <h3><%= link_to island.name, island_path(island) %></h3>
+              <h2 class="card-trip-pricing">€ <%= island.price_per_night %> / night</h2>
               <p><%= island.description %></p>
             </div>
-            <h2 class="card-trip-pricing">€ <%= island.price_per_night %> / night</h2>
           </div>
         </div>
       <% end %>
