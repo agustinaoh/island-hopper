@@ -10,3 +10,12 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+// CUSTOM
+.overlay {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.dropdown-toggle::after {
+  color: #fafafa;
+}

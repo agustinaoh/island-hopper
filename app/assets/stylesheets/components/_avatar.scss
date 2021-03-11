@@ -19,10 +19,12 @@
   border: white 1px solid;
 }
 
+// CUSTOM
 .nav-avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .bg-fafafa {
@@ -32,3 +34,5 @@
 .profile-picture {
   border-radius: 50%;
 }
+
+
