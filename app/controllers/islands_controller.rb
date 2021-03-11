@@ -3,11 +3,12 @@ class IslandsController < ApplicationController
 
   def index
     @islands = params[:query].present? ? Island.search_by_name_and_location(params[:query]) : Island.all
-
+    
     @markers = @islands.geocoded.map do |island|
       {
         lat: island.latitude,
-        lng: island.longitude
+        lng: island.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { island: island })
       }
     end
   end
