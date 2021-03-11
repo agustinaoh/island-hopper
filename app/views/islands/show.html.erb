@@ -1,16 +1,14 @@
 <div class="container">
- <p class="m-0"><%= link_to '< back', :back %></p>
+
+  <p class="m-0"><%= link_to '< back', :back %></p>
 
   <div class="text-center pb-3">
-
     <h1>Welcome to <%= @island.name %></h1>
-
     <p>
       <i class="fas fa-globe-europe island-blue"></i>
       <%= @island.location %>  -  MAP / PHOTOS
     </p>
   </div>
-
 
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner " style="max-height: 600px">
@@ -36,7 +34,6 @@
 
   <div class="d-flex mt-3 ">
     <div class="island-details row bg-light">
-
       <!--  Island infos -->
       <div class="island-description col-6">
         <p><i class="fas fa-user-circle island-orange"></i> Listed by <%= @island.user.first_name  %></p>
@@ -60,9 +57,7 @@
             <button class="btn btn-primary p-3">Request booking</button>
           </div>
       </div>
-
     </div>
-
   </div>
 
 <!--   MAP SECTION -->
@@ -87,26 +82,20 @@
 
 
   <div class="cards map-cards">
-
-  <% @suggestions.each do |island| %>
-
-  <a href="<%= island_path(island) %>">
-
-
-    <div class="card-trip">
-      <img src='<%= cl_image_path island.photos.first.key %>' alt="<%= island.name %>" />
-      <div class="card-trip-infos">
-        <div>
-
-          <h2><%= island.name %></h2>
-
-          <p><%= island.description %>!</p>
+    <% @suggestions.each do |island| %>
+      <a href="<%= island_path(island) %>">
+        <div class="card-trip">
+          <img src='<%= cl_image_path island.photos.first.key %>' alt="<%= island.name %>" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= island.name %></h2>
+              <p><%= island.description %>!</p>
+            </div>
+            <h2 class="card-trip-pricing">€ <%= island.price_per_night %> / night</h2>
+          </div>
         </div>
-        <h2 class="card-trip-pricing">€ <%= island.price_per_night %> / night</h2>
-      </div>
-    </div>
-  </a>
-  <% end %>
-</div>
+      </a>
+    <% end %>
+  </div>
 
 </div>
