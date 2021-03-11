@@ -15,11 +15,23 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = "pending"
     if @booking.save
-      redirect_to island_path(@island) # Redirect to dashboard_path
+      redirect_to dashboard_path # Redirect to dashboard_path
     else
       render :new
     end
   end
+
+  # def bookings?
+  #   bookings_count = 0
+
+  #   current_user.islands.each do |island|
+  #     island.bookings.each do
+  #       bookings_count += 1
+  #     end
+  #   end
+
+  #   return bookings_count.positive?
+  # end
 
   # def edit
   #   @booking = Booking.find(params[:id])
@@ -45,13 +57,21 @@ class BookingsController < ApplicationController
     redirect_to dashboard_path
   end
 
-  def index
-    @bookings = Booking.where(user: current_user) # agustina made a reservation
+  def reject
+    @booking = Booking.find(params[:id])
+    @booking.status = 'Rejected'
+    @booking.save
+
+    redirect_to dashboard_path
   end
 
-  def my_requests
-    @bookings = Booking.where(island.user == current_user) # daire owns the island
-  end
+  # def index
+  #   @bookings = Booking.where(user: current_user) # agustina made a reservation
+  # end
+
+  # def my_requests DOESN'T WORK
+  #   @bookings = Booking.where(island.user == current_user) # daire owns the island
+  # end
   private
 
   def booking_params
