@@ -5,12 +5,14 @@
 
 
 .left-listing {
-
+  width: 100vw;
 }
 
 
-.right-map {
-  height: 100vh;
+#map {
+  // height: 100vh;
+  position: sticky;
+  top: 0px;
 }
 
 
