@@ -6,19 +6,20 @@
 
 
     <div class="left-header">
-      <h2>The island experience, made easy.</h2>
-        
+      <h2>The island experience, made super easy.</h2>
+
           <div class="d-flex justify-content-between">
             <%= form_tag islands_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Search...",
-        style: "width: 400px; padding: 2px"
-      %>
-      <%= submit_tag "Find your island", class: "btn btn-primary" %>
-    <% end %>
+            <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Search...",
+                style: "width: 400px; padding: 5px"
+            %>
+            <%= submit_tag "Find your island", class: "btn btn-primary" %>
+            <% end %>
           </div>
+
     </div>
 
     <div class="cards map-cards">
@@ -27,7 +28,7 @@
           <img src='<%= cl_image_path island.photos.first.key %>' alt="<%= island.name %>" />
           <div class="card-trip-infos">
             <div>
-              <h2><%= link_to island.name, island_path(island) %></h2>
+              <h3><%= link_to island.name, island_path(island) %></h3>
               <p><%= island.description %></p>
             </div>
             <h2 class="card-trip-pricing">€ <%= island.price_per_night %> / night</h2>

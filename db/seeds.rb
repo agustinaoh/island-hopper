@@ -32,8 +32,8 @@ file10 = URI.open('https://images.unsplash.com/photo-1533604145636-765f22ac7352?
 
 island1 = Island.new(
     name: "Marokau",
-    location: "Pacific region",
-    description: "French Polynesia",
+    location: "Groenland",
+    description: "While very cold ans icy, this island will compensate with the warmth of its local people, and it's local alcohol.",
     capacity: 10,
     price_per_night: 30,
     facilities: "Pool, tennis court",
@@ -44,8 +44,8 @@ island1.save!
 
 island2 = Island.new(
     name: "Takuu",
-    location: "Pacific region",
-    description: "Papua New Guinea",
+    location: "Tahiti, French polinesia",
+    description: "This Island is ideal for a romantic stay, featuring all the necessary utilities to enjoy a great time there.",
     capacity: 5,
     price_per_night: 40,
     facilities: "Pool, tennis court" ,
@@ -55,9 +55,9 @@ island2.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
 island2.save!
 
 island3 = Island.new(
-    name: "Balabac",
-    location: "Pacific region",
-    description: "Philippines",
+    name: "Corsica",
+    location: "Corsica, France",
+    description: "This Island is ideal for a romantic stay, featuring all the necessary utilities to enjoy a great time there.",
     capacity: 2,
     price_per_night: 50,
     facilities: "Pool, tennis court" ,
@@ -68,8 +68,8 @@ island3.save!
 
 island4 = Island.new(
     name: "Hiu",
-    location: "Pacific region",
-    description: "Vanuatu",
+    location: "Indian Ocean",
+    description: "The most remote Island. Perfect to escape the city life and start mediation.",
     capacity: 30,
     price_per_night: 100,
     facilities: "Pool, tennis court" ,
@@ -80,8 +80,8 @@ island4.save!
 
 island5 = Island.new(
     name: "Oktyabr'skoy Revolyutsii",
-    location: "Arctic region",
-    description: "Russian Federation",
+    location: "Easgter Island",
+    description: "This Island is ideal for a romantic stay, featuring all the necessary utilities to enjoy a great time there.",
     capacity: 100,
     price_per_night: 30,
     facilities: "Pool, tennis court" ,
@@ -92,9 +92,9 @@ island5.photos.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
 island5.save!
 
 island6 = Island.new(
-    name: "Padang",
-    location: "Indian region",
-    description: "Indonesia - Sumatra",
+    name: "Menorca",
+    location: "Menorca",
+    description: "This island is part of the Baleares archipelo, in the middle of the Mediterranean sea. Ideal for outdoor activites and scuba diving.",
     capacity: 15,
     price_per_night: 75,
     facilities: "Pool, tennis court" ,
@@ -105,9 +105,9 @@ island6.photos.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 island6.save!
 
 island7 = Island.new(
-    name: "Pedro Cays",
-    location: "Atlantic region",
-    description: "Jamaica",
+    name: "Ibiza",
+    location: "Ibiza",
+    description: "This island is part of the Baleares archipelo, in the middle of the Mediterranean sea. Ideal for outdoor activites and scuba diving.",
     capacity: 100 ,
     price_per_night: 25,
     facilities: "Pool, tennis court" ,
@@ -118,9 +118,9 @@ island7.photos.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 island7.save!
 
 island8 = Island.new(
-    name: "Dugi",
-    location: "Mediterranean region",
-    description: "Croatia",
+    name: "Ile de ré",
+    location: "Ile de ré",
+    description: "This island is perfect if your are an oyester lover. Nothing more to do though.",
     capacity: 3,
     price_per_night: 200,
     facilities: "Pool, tennis court" ,
@@ -132,8 +132,8 @@ island8.save!
 
 island9 = Island.new(
     name: "Fernando de Noronha",
-    location: "Atlantic region",
-    description: "Brazil",
+    location: "Illa grande ",
+    description: "Have you heard about the paradise on earth ? Well here you are !",
     capacity: 20,
     price_per_night: 18,
     facilities: "Pool, tennis court" ,
@@ -144,9 +144,9 @@ island9.photos.attach(io: file9, filename: 'nes.png', content_type: 'image/png')
 island9.save!
 
 island10 = Island.new(
-    name: "Tawila",
-    location: "Indian region",
-    description: "Egypt",
+    name: "Madagascar",
+    location: "Madagascar",
+    description: "Probably the biggest island avaialble on Island Hopper. also one of the most tropical !",
     capacity: 15,
     price_per_night: 50,
     facilities: "Pool, tennis court" ,
