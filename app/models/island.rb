@@ -1,6 +1,7 @@
 class Island < ApplicationRecord
   belongs_to :user
   has_many_attached :photos
+  has_many :bookings
 
   # TODO: validate inputs
   # FIXME: shouldn't create empty island
