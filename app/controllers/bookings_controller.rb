@@ -37,10 +37,21 @@ class BookingsController < ApplicationController
   #   end
   # end
 
-  def index
-    @bookings = Booking.where(user: current_user)
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.status = 'Accepted'
+    @booking.save
+
+    redirect_to dashboard_path
   end
 
+  def index
+    @bookings = Booking.where(user: current_user) # agustina made a reservation
+  end
+
+  def my_requests
+    @bookings = Booking.where(island.user == current_user) # daire owns the island
+  end
   private
 
   def booking_params

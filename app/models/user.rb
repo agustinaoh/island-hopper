@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :first_name, presence: true
 
   has_many :islands
+  has_many :bookings
 end

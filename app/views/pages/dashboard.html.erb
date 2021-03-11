@@ -47,9 +47,34 @@
   </div>
 
   <div class="my-requests my-5 border-bottom">
-    <h2 class="my-3">My Island's requests</h2>
+    <h2 class="my-3">My Islands' requests</h2>
     <p>You don't have any pending requests</p>
     <p>You have a request on <strong>Easter Island</strong> from <strong>Daire</strong> on 22/3-28/3. Accept/Reject</p> 
+
+    <% current_user.islands.each do |island| %>
+      <% island.bookings.each do |booking| %>
+        <div class="card-product">
+          <img src=" <%= cl_image_path booking.island.photos.first.key %>  " />
+          <div class="card-product-infos d-flex">
+            <div>
+              <h2><%= booking.island.name %></h2> 
+              <p><i class="fas fa-user-circle island-orange"></i> Requested by <strong><%= booking.user.first_name %> </strong></p> 
+              <p>From <%= booking.start_date %>  to <%= booking.end_date %> </p>
+            </div>
+
+            <div class="booking-buttons">
+              <%= link_to islands_path do %>
+                <button class="btn btn-primary">Accept</button>
+              <% end %>
+              <%= link_to islands_path do %>
+                <button class="btn btn-danger">Reject</button>
+              <% end %>
+          </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    
 
   </div>
    
