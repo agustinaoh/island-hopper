@@ -9,7 +9,6 @@ const buildMap = (mapElement) => {
   // buildMap.addControl(new mapboxgl.NavigationControl());
 };
 
-
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
@@ -20,8 +19,6 @@ const addMarkersToMap = (map, markers) => {
       .addTo(map);
   });
 };
-
-
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
