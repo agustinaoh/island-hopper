@@ -2,17 +2,14 @@ class IslandsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @islands = Island.all
-
-    #  # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @islands = params[:query].present? ? Island.search_by_name_and_location(params[:query]) : Island.all
     @markers = @islands.geocoded.map do |island|
       {
         lat: island.latitude,
-        lng: island.longitude
+        lng: island.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { island: island })
       }
     end
-
-    @islands = Island.search_by_name_and_location(params[:query])
   end
 
   def new
