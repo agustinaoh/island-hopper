@@ -4,4 +4,8 @@ class Island < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
+
+  ACCESS = ["Boat", "Helicopter", "Plane", "Swim", "Parachute"]
+  FACILITIES = ["Pool", "Sauna", "Jacuzzi", "Tennis Court", "Helicopter filed", "Volcano"]
+
 end
