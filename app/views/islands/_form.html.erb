@@ -4,25 +4,31 @@
     <%= f.input :name,
                 required: true,
                 autofocus: true %>
+
     <%= f.input :location,
                 required: true,
                 autofocus: true %>
+
     <%= f.input :description,
                 required: true,
                 autofocus: true %>
+
     <%= f.input :capacity,
                 required: true,
                 autofocus: true %>
+
     <%= f.input :facilities,
-                required: true,
-                autofocus: true %>
+                collection: Island::FACILITIES %>
+
     <%= f.input :access,
-                required: true,
-                autofocus: true %>
+                collection: Island::ACCESS %>
+
     <%= f.input :price_per_night,
                 required: true,
                 autofocus: true %>
+
     <%= f.input :photos, input_html: { class: 'd-none', id: 'photo-input', multiple: true },
+
                 label_html: { class: 'upload-photo'},
                 label: '📷 Upload a photo'%>
   </div>
@@ -32,5 +38,5 @@
   <div class="form-actions">
     <%= f.button :submit, "Submit", class: "btn btn-primary" %>
   </div>
-  
+
 <% end %>
