@@ -7,12 +7,18 @@
 
     <div class="left-header">
       <h2>The island experience, made easy.</h2>
-        <%= form_with do |f| %>
+        
           <div class="d-flex justify-content-between">
-            <%= f.text_field :query, value: "search term", class: "form-control"  %>
-            <%= f.submit "Search", class: "btn btn-primary"  %>
+            <%= form_tag islands_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Search...",
+        style: "width: 400px; padding: 2px"
+      %>
+      <%= submit_tag "Find your island", class: "btn btn-primary" %>
+    <% end %>
           </div>
-        <% end %>
     </div>
 
     <div class="cards map-cards">
