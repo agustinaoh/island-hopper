@@ -3,6 +3,14 @@ class IslandsController < ApplicationController
 
   def index
     @islands = Island.all
+
+     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @islands.geocoded.map do |island|
+      {
+        lat: island.latitude,
+        lng: island.longitude
+      }
+    end
   end
 
   def new
@@ -23,6 +31,13 @@ class IslandsController < ApplicationController
   def show
     @island = Island.find(params[:id])
     @suggestions = Island.all.sample(3)
+
+    @markers = [
+      {
+        lat: @island.latitude,
+        lng: @island.longitude
+      }
+    ]
   end
 
   def edit

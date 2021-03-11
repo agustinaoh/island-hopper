@@ -2,7 +2,7 @@
  <p class="m-0"><%= link_to '< back', :back %></p>
 
   <div class="text-center pb-3">
-  
+
     <h1>Welcome to <%= @island.name %></h1>
 
     <p>
@@ -36,6 +36,8 @@
       <div class="island-description col-6">
         <p><i class="fas fa-user-circle island-orange"></i> Listed by <%= @island.user.first_name  %></p>
         <p><i class="fas fa-user-friends island-orange"></i> <%= @island.capacity  %> people</p>
+        <p><i class="fas fa-money-bill-wave"></i></i> € <%= @island.price_per_night  %> per night</p>
+
         <h3>Island description</h3>
         <p><%= @island.description %> </p>
         <h3>Features</h3>
@@ -57,6 +59,22 @@
     </div>
 
   </div>
+
+<!--   MAP SECTION -->
+
+  <div class="text-center pt-5 pb-3">
+    <h2 class="mt-3">Island Location</h2>
+  </div>
+
+  <div class="show-map">
+    <div  id="map"
+          style="width: 100%; height: 400px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+
+<!--   SUGGESTIONS -->
 
   <div class="text-center pt-5 pb-3">
     <h2 class="mt-3">Island suggestions</h2>

@@ -1,12 +1,11 @@
 <div class="map-wrapper">
 
-  <!-- LISTING -->
+  <!-- LEFT / LISTING -->
 
   <div class="left-listing">
 
 
     <div class="left-header">
-
       <h2>The island experience, made easy.</h2>
         <%= form_with do |f| %>
           <div class="d-flex justify-content-between">
@@ -16,29 +15,34 @@
         <% end %>
     </div>
 
-
     <div class="cards map-cards">
       <% @islands.each do |island| %>
         <div class="card-trip">
           <img src='<%= cl_image_path island.photos.first.key %>' alt="<%= island.name %>" />
           <div class="card-trip-infos">
             <div>
-
               <h2><%= link_to island.name, island_path(island) %></h2>
-
-              <p><%= island.description %>!</p>
+              <p><%= island.description %></p>
             </div>
             <h2 class="card-trip-pricing">€ <%= island.price_per_night %> / night</h2>
           </div>
         </div>
       <% end %>
     </div>
+
   </div>
 
-  <!-- MAP -->
-  <div class="right-map">
-    <img src="https://www.researchgate.net/profile/Paul-Baruya/publication/324414241/figure/fig1/AS:613878748680214@1523371507777/Map-of-the-Philippines.png" alt="" style="min-height: 100vh; max-width: 550px;">
-  </div>
+  <!-- RIGHT / MAP -->
+
+    <div  id="map"
+          class="right-map"
+          style="width: 100%; height: 100vh;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+
+    <!-- <img src="https://www.researchgate.net/profile/Paul-Baruya/publication/324414241/figure/fig1/AS:613878748680214@1523371507777/Map-of-the-Philippines.png" alt="" style="min-height: 100vh; max-width: 550px;"> -->
+
 
 
 </div>
