@@ -24,22 +24,21 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { previewImageOnFileSelect } from '../components/photo_preview.js'
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { previewImageOnFileSelect } from '../components/photo_preview.js'
+import { initAutocomplete } from '../plugins/init_autocomplete.js'
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   previewImageOnFileSelect();
+  initMapbox();
+  initAutocomplete();
 });
 
 
-import 'mapbox-gl/dist/mapbox-gl.css';
 
-import { initMapbox } from '../plugins/init_mapbox';
 
-document.addEventListener('turbolinks:load', () => {
-  initMapbox();
-})
