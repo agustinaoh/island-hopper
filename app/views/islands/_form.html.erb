@@ -23,12 +23,12 @@
     <%= f.input :access,
                 collection: Island::ACCESS %>
 
-
     <%= f.input :price_per_night,
                 required: true,
                 autofocus: true %>
 
-    <%= f.input :photos, input_html: { class: 'd-none', id: 'photo-input' },
+    <%= f.input :photos, input_html: { class: 'd-none', id: 'photo-input', multiple: true },
+
                 label_html: { class: 'upload-photo'},
                 label: '📷 Upload a photo'%>
   </div>
