@@ -28,6 +28,7 @@ class IslandsController < ApplicationController
     end
   end
 
+  
   def show
     @island = Island.find(params[:id])
     @suggestions = Island.all.sample(3)
@@ -60,8 +61,8 @@ class IslandsController < ApplicationController
 
   def island_params
     params.require(:island).permit(
-      :name, :location, :description, :capacity, :facilities,
-      :access, :price_per_night, :latitude, :longitude, photos: []
+      :name, :location, :description, :capacity, 
+      :price_per_night, :latitude, :longitude, access_list: [], facility_list: [], photos: []
     )
   end
 end

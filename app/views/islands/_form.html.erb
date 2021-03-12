@@ -17,11 +17,15 @@
                 required: true,
                 autofocus: true %>
 
-    <%= f.input :facilities,
-                collection: Island::FACILITIES %>
+    <%= f.input :facility_list,
+                :as => :check_boxes,
+                collection: Island::FACILITIES
+                %>
 
-    <%= f.input :access,
-                collection: Island::ACCESS %>
+    <%= f.input :access_list,
+                :as => :check_boxes,
+                collection: Island::ACCESS 
+                %>
 
     <%= f.input :price_per_night,
                 required: true,

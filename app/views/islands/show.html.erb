@@ -40,10 +40,19 @@
         <p><i class="fas fa-user-friends island-orange"></i> <%= @island.capacity  %> people</p>
         <p><i class="fas fa-money-bill-wave"></i></i> € <%= @island.price_per_night  %> per night</p>
 
-        <h3>Island description</h3>
+        <h3>Island Description</h3>
         <p><%= @island.description %> </p>
         <h3>Features</h3>
-        <p><%= @island.facilities %> </p>
+        <span class><% @island.facility_list.each do |facility| %> </span>
+        <%= facility %>
+        <%=  "," if facility != @island.facility_list.last %>
+        <% end %>
+
+        <h3 class="mt-3">Access</h3>
+        <span><% @island.access_list.each do |access| %> </span>
+        <%= access %>
+        <%=  "," if access != @island.access_list.last %>
+        <% end %>
       </div>
 
       <!--  BOOKING FORM -->
