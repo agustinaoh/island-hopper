@@ -1,3 +1,4 @@
+Booking.destroy_all
 Island.destroy_all
 User.destroy_all
 
@@ -36,7 +37,6 @@ island1 = Island.new(
     description: "While very cold ans icy, this island will compensate with the warmth of its local people, and it's local alcohol.",
     capacity: 10,
     price_per_night: 30,
-    facilities: "Pool, tennis court",
     user: user1
     )
 island1.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
@@ -48,7 +48,6 @@ island2 = Island.new(
     description: "This Island is ideal for a romantic stay, featuring all the necessary utilities to enjoy a great time there.",
     capacity: 5,
     price_per_night: 40,
-    facilities: "Pool, tennis court" ,
     user: user2
     )
 island2.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
@@ -60,7 +59,6 @@ island3 = Island.new(
     description: "This Island is ideal for a romantic stay, featuring all the necessary utilities to enjoy a great time there.",
     capacity: 2,
     price_per_night: 50,
-    facilities: "Pool, tennis court" ,
     user: user3
     )
 island3.photos.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
@@ -72,7 +70,6 @@ island4 = Island.new(
     description: "The most remote Island. Perfect to escape the city life and start mediation.",
     capacity: 30,
     price_per_night: 100,
-    facilities: "Pool, tennis court" ,
     user: user2
     )
 island4.photos.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
@@ -84,7 +81,6 @@ island5 = Island.new(
     description: "This Island is ideal for a romantic stay, featuring all the necessary utilities to enjoy a great time there.",
     capacity: 100,
     price_per_night: 30,
-    facilities: "Pool, tennis court" ,
     user: user3
     )
 
@@ -97,7 +93,6 @@ island6 = Island.new(
     description: "This island is part of the Baleares archipelo, in the middle of the Mediterranean sea. Ideal for outdoor activites and scuba diving.",
     capacity: 15,
     price_per_night: 75,
-    facilities: "Pool, tennis court" ,
     user: user1
     )
 island6.photos.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
@@ -110,7 +105,6 @@ island7 = Island.new(
     description: "This island is part of the Baleares archipelo, in the middle of the Mediterranean sea. Ideal for outdoor activites and scuba diving.",
     capacity: 100 ,
     price_per_night: 25,
-    facilities: "Pool, tennis court" ,
     user: user2
     )
 island7.photos.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
@@ -123,7 +117,6 @@ island8 = Island.new(
     description: "This island is perfect if your are an oyester lover. Nothing more to do though.",
     capacity: 3,
     price_per_night: 200,
-    facilities: "Pool, tennis court" ,
     user: user3
     )
 island8.photos.attach(io: file8, filename: 'nes.png', content_type: 'image/png')
@@ -136,7 +129,6 @@ island9 = Island.new(
     description: "Have you heard about the paradise on earth ? Well here you are !",
     capacity: 20,
     price_per_night: 18,
-    facilities: "Pool, tennis court" ,
     user: user1
     )
 island9.photos.attach(io: file9, filename: 'nes.png', content_type: 'image/png')
@@ -149,8 +141,23 @@ island10 = Island.new(
     description: "Probably the biggest island avaialble on Island Hopper. also one of the most tropical !",
     capacity: 15,
     price_per_night: 50,
-    facilities: "Pool, tennis court" ,
     user: user2
     )
 island10.photos.attach(io: file10, filename: 'nes.png', content_type: 'image/png')
 island10.save!
+
+ACCESS = ["Boat", "Helicopter", "Plane", "Swim", "Parachute"]
+FACILITIES = ["Pool", "Sauna", "Jacuzzi", "Tennis Court", "Helicopter filed", "Volcano"]
+
+Island.all.each do |island|
+    FACILITIES.sample(3).each do |facility|
+        island.facility_list.add(facility)
+    end
+end
+
+
+Island.all.each do |island|
+    ACCESS.sample(3).each do |item|
+        island.access_list.add(item)
+    end
+end
