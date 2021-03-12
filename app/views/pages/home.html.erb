@@ -9,16 +9,16 @@
 <% end %>
 
 
-<div class="container text-center mt-5 pb-4 border-bottom">
-  <div class="searchbar">
+<div class="d-flex container text-center mt-5 pb-4 border-bottom justify-content-center">
+  <div class="searchbar text-align-center">
     <%= form_tag islands_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Search...",
+        placeholder: "Where are you dreaming of...?",
         style: "width: 400px; padding: 2px"
       %>
-      <%= submit_tag "Find your island", class: "btn btn-primary" %>
+      <%= submit_tag "Find your island", class: "btn btn-primary mt-2" %>
     <% end %>
   </div>
 </div>
