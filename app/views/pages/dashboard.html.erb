@@ -44,9 +44,7 @@
     <% if current_user.bookings.length == 0 %>
       <p>You don't have any pending requests.</p>
     <% end %>
-    
-    <p>Congratulations! You request on <strong>Easter Island</strong> was accepted</p>
-
+  
     <% current_user.bookings.each do |booking| %>
       <div class="card-product">
         <img src=" <%= cl_image_path booking.island.photos.first.key %>  " />
