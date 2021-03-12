@@ -6,3 +6,41 @@
   background: white;
   border-radius: 2px;
 }
+
+
+#btn-login {
+  padding: 5px 30px;
+  margin-right: 15px;
+  color: $island-blue;
+  font-weight: bold;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+    &:hover {
+    opacity: 0.8;
+    }
+}
+
+  nav a {
+    text-decoration: none !important;
+  }
+
+#btn-signup {
+  padding: 5px 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none !important;
+  border: 2px solid #FFFFFF;
+  background-color: $island-blue;
+  border-radius: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+    &:hover {
+    opacity: 0.8;
+    }
+}
+
