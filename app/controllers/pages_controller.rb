@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @pending_bookings = current_user.bookings.where(status: 'Pending')
+    @pending_bookings = current_user.booking_requests.where(status: 'Pending')
     @accepted_bookings = current_user.bookings.where(status: 'Accepted')
   end
 end

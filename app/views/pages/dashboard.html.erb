@@ -67,6 +67,9 @@
 
   </div>
 
+  
+  <% unless current_user.islands.length == 0 %>
+    
   <div class="my-requests border-bottom pb-3">
     <h2 class="my-3">My Islands' requests</h2>
     
@@ -124,4 +127,6 @@
     <% end %>
     
   </div>
+
+  <% end %>
 </div>
