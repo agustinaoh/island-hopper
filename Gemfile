@@ -38,6 +38,7 @@ gem 'geocoder'
 gem 'devise'
 gem 'cloudinary', '~> 1.16.0'
 gem 'pg_search', '~> 2.3.0'
+gem 'acts-as-taggable-on', '~> 7.0'
 
 
 group :development, :test do
