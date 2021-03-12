@@ -8,11 +8,11 @@
     <div class="left-header">
       <h2 class="mb-3">The island experience, made super easy.</h2>
 
-          <div class="search-box">
+          <div class="d-flex search-box">
             <%= form_tag islands_path, method: :get do %>
             <%= text_field_tag :query,
                 params[:query],
-                class: "p-3",
+                class: "p-3  flex-grow-1 wide-input",
                 placeholder: "Search...",
                 style: ""
             %>
