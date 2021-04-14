@@ -3,9 +3,9 @@ Island.destroy_all
 User.destroy_all
 
 # users seeds
-avatar1 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615302078/vicky-hladynets-C8Ta0gwPbQg-unsplash_jwpyzl.jpg')
-avatar2 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615302095/julian-wan-2EdIX-O2lkI-unsplash_oez03y.jpg')
-avatar3 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615302112/michael-dam-mEZ3PoFGs_k-unsplash_oznodo.jpg')
+avatar1 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615557971/xpshqh53lutwsvp49ucqv7y26g9j.jpg')
+avatar2 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615557969/vgxj0avi2x0nufusv66h2ffakadl.jpg')
+avatar3 = URI.open('https://res.cloudinary.com/dsz5gd9a3/image/upload/v1615557974/xnr6vfwbasmrwyxxvt1kwexrpcp0.jpg')
 
 user1 = User.new(first_name: "Sally", last_name: "Seashell", email: "guillaume@myisland.com", password: "password")
 user1.avatar.attach(io: avatar1, filename: 'nes.png', content_type: 'image/png')

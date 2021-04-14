@@ -11,6 +11,5 @@ Rails.application.routes.draw do
 
   get 'bookings/:id/reject', to: 'bookings#reject', as: :reject_booking
 
-
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
