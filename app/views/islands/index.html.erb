@@ -5,19 +5,23 @@
   <div class="left-listing">
 
 
-    <div class="left-header">
-      <h2 class="mb-3">The island experience, made super easy.</h2>
+    <div class="left-header w-100 mx-auto">
+      <h2 class="mb-3 text-center">The island experience, made super easy.</h2>
 
-          <div class="d-flex search-box">
-            <%= form_tag islands_path, method: :get do %>
-            <%= text_field_tag :query,
-                params[:query],
-                class: "p-3  flex-grow-1 wide-input",
-                placeholder: "Search...",
-                style: ""
-            %>
-            <%= submit_tag "Find your island", class: "p-3 btn btn-primary" %>
-            <% end %>
+        <div class="d-flex search-box justify-content-center">
+            <div class="searchbar text-align-center position-relative">
+              <%= form_tag islands_path, method: :get do %>
+                <%= text_field_tag :query,
+                  params[:query],
+                  class: "form-control white-bar b-sh text-center",
+                  placeholder: "Where are you dreaming of...?",
+                  style: "width: 540px; padding: 2px"
+                %>
+              <%= button_tag(type: "submit", class: "btn icon-primary mt-2 position-absolute", style: "top: -9px; right: -1px") do %>
+                <i class="fas fa-search"></i> 
+              <% end %>
+              <% end %>
+            </div>
           </div>
 
     </div>

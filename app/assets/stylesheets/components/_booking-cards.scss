@@ -7,6 +7,7 @@
   align-items: center;
   margin-bottom: 8px;
   width: 500px;
+  border-radius: 10px;
   
   img {
     height: 100%;
@@ -18,6 +19,7 @@
     font-size: 16px;
     font-weight: bold;
     margin: 0;
+    color: $island-light;
   }
   
   p {
@@ -26,6 +28,7 @@
     opacity: .7;
     margin-bottom: 0;
     margin-top: 8px;
+    color: $island-light;
   }
   
   .card-product-infos {
@@ -33,5 +36,6 @@
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
+    color:$island-light;
   }
 }

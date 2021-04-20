@@ -9,12 +9,13 @@ $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
 
-$island-background: #fafafa;
-$island-light: #DCDCDD;
+$island-background: #183f3c;
+$island-light: #195450;
 $island-medium: #C5C3C6;
 $island-dark: #46494C;
 $island-ocean: #4C5C68;
 $island-blue: #1985A1;
+$island-sand: #a98f6c;
 
 
 .island-blue {
@@ -22,7 +23,7 @@ $island-blue: #1985A1;
 }
 
 .island-orange {
-  color: $orange;
+  color: $island-sand;
 }
 
 .island-blue {
