@@ -3,6 +3,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 500px;
+  border-radius: 10px;
 
   img {
     height: 300px;
@@ -14,19 +15,25 @@
     font-size: 20px;
     font-weight: bold;
     margin: 0;
+    color: $island-sand;
   }
 
   h3 {
    font-size: 16px;
    font-weight: bold;
    margin: 0;
+   color: $island-light;
   }
 
   p {
     font-size: 12px;
     opacity: .7;
     margin: 0;
-    color: $island-dark;
+    color: $island-light;
+  }
+
+  a {
+    color: $island-light !important;
   }
 }
 
@@ -43,6 +50,10 @@
     top: -20px;
     width: 40px;
   }
+
+  h4 {
+    color: $island-light;
+  }
 }
 
 .card-category {
@@ -54,7 +65,7 @@
   align-items: center;
   color: white;
   font-size: 24px;
-  font-weight: bold;
+  font-family: 'Montaga';
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -64,6 +75,7 @@
 
   width: 150px;
   font-size: 14px;
+  color: white;
 
   .card-my-island-image {
     background-size: cover;
@@ -73,6 +85,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 4px;
+    border-radius: 10px;
   }
 }
 
@@ -143,7 +156,22 @@
   padding: 20px;
   border: 0px solid $island-medium;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: $island-light;
+  border-radius: 10px;
 
+  p {
+    color: white;
+  }
+
+  h3 {
+    color: white;
+  }
+
+}
+
+.book-form {
+  color: $island-light !important;
+  border-radius: 10px;
 }
 
 
@@ -162,6 +190,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
 }
 
 .card-trip > img {
@@ -180,6 +209,7 @@
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  color: $island-light;
 }
 
 
@@ -189,6 +219,14 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+
+  h2 {
+    color: $island-sand;
+  }
+
+  h3 {
+    color: $island-light;
+  }
 }
 
 .card-trip-infos .card-trip-user {

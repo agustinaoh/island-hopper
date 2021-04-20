@@ -54,3 +54,104 @@ position: absolute;
 bottom: 0;
 width: 100%;
 }
+
+
+// CSS that I can't find elsewhere
+a {
+  color: $island-light;
+}
+
+h2 {
+  color: white;
+  font-family: 'Sorts Mill Goudy', serif;
+  text-transform: none;
+}
+
+h1 {
+  color: white;
+  font-family: 'Montaga', serif;
+}
+
+h3 {
+  color: white;
+}
+
+.img-style-car {
+background-color: $island-background;
+}
+
+p {
+  color: white;
+}
+
+
+.white-bar {
+  background-color: white;
+  border: none;
+  padding: 24px;
+  border-radius: 26px;
+}
+
+
+.form-group {
+  margin: 0;
+}
+
+
+.btn-green {
+  color: white;
+  padding: 7px 24px;
+  border-radius: 24px;
+  background-color: $island-light;
+  transition: all 0.3s ease;
+  border: 2px solid $island-light;
+
+  &:hover{
+    color: white;
+    background-color: green;
+    border: 2px solid green;
+  }
+}
+
+.btn-book, .btn-primary {
+  color: white;
+  padding: 5px;
+  background-color: $island-light;
+  transition: all 0.3s ease;
+  border: 2px solid $island-light;
+
+  &:hover{
+    color: white;
+    background-color: $island-light;
+    border: 2px solid $island-light;
+  }
+
+}
+
+.icon-primary {
+  color: white !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: $island-light;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-medium {
+  background-color: white;
+}
+
+.btn {
+  color: white;
+}
+
+.back {
+  color: white;
+
+  a {
+    color: white;
+  }
+}

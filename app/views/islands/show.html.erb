@@ -1,11 +1,19 @@
 <div class="container">
 
-  <p class="m-0 mt-1"><%= link_to "<< back to results", islands_path %></p>
+  <div class="back">
+    <p class="m-0 mt-1 back"><%= link_to "<< back to results", islands_path %></p>
+  </div>
 
   <div class="text-center pb-3">
-    <h1>Welcome to <%= @island.name %></h1>
+    <div class="d-flex align-items-center justify-content-center">
+      <h1 class="text-center margin-auto pl-2 pr-2 mt-4">Welcome to <%= @island.name %> </h1>
+      <%= image_tag "island.png", class: "d-inline logo-img-nav" %>
+    </div>
+
+
+    <h1></h1>
     <p>
-      <i class="fas fa-globe-europe island-blue"></i>
+      <i class="fas fa-globe-europe island-orange"></i>
       <%= @island.location %>  -  MAP / PHOTOS
     </p>
   </div>
@@ -33,12 +41,12 @@
   </div>
 
   <div class="d-flex mt-3 ">
-    <div class="island-details row bg-light">
+    <div class="island-details row">
       <!--  Island infos -->
       <div class="island-description col-6">
         <p><i class="fas fa-user-circle island-orange"></i> Listed by <%= @island.user.first_name  %></p>
         <p><i class="fas fa-user-friends island-orange"></i> <%= @island.capacity  %> people</p>
-        <p><i class="fas fa-money-bill-wave"></i></i> € <%= @island.price_per_night  %> per night</p>
+        <p><i class="fas fa-money-bill-wave island-orange"></i></i> € <%= @island.price_per_night  %> per night</p>
 
         <h3>Island Description</h3>
         <p><%= @island.description %> </p>
@@ -56,8 +64,8 @@
       </div>
 
       <!--  BOOKING FORM -->
-      <div class="col-6 p-3 bg-medium">
-          <p>
+      <div class="col-6 p-3 bg-medium rounded">
+          <p class="book-form">
             Interested in <strong><%= @island.name %></strong> Island? Send a booking request to <strong><%= @island.user.first_name  %></strong>!
           </p>
 
@@ -65,7 +73,7 @@
           <%= simple_form_for [@island, @booking] do |f| %>
           <%= f.input :start_date, as: :string, required: false, input_html: { class: "datepicker" }%>
           <%= f.input :end_date, as: :string, required: false, input_html: { class: "datepicker"} %>
-          <div class="btn btn-primary">
+          <div class="btn btn-book mt-1">
           <%= f.button :submit %>
           </div>
           <% end %>
